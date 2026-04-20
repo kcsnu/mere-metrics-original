@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">Mere Metrics</string>
+
+    <!-- Screen titles -->
+    <string name="login_title">Login</string>
+    <string name="history_title">Weight History</string>
+    <string name="sms_title">SMS Notifications</string>
+
+    <!-- App name and logo -->
+    <string name="login_app_title">Mere Metrics: Weight Tracker</string>
+    <string name="login_app_icon">⚖️</string>
+
+    <!-- Login -->
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="action_log_in">Log In</string>
+    <string name="action_create_account">Create Account</string>
+
+    <string name="toast_enter_username_password">Please enter a username and password.</string>
+    <string name="toast_login_failed">Login failed. Check your credentials.</string>
+    <string name="toast_username_taken">That username is already taken.</string>
+    <string name="toast_create_account_failed">Could not create account. Try a different username.</string>
+    <string name="toast_login_first">Please log in first.</string>
+
+    <!-- Entry fields / actions -->
+    <string name="hint_entry_date">Date (MM/DD/YYYY)</string>
+    <string name="hint_entry_weight">Weight (lbs)</string>
+    <string name="action_add_entry">Add Entry</string>
+    <string name="action_sms_notifications">SMS Notifications</string>
+
+    <!-- Goal weight -->
+    <string name="current_goal_not_set">Goal: Not set</string>
+    <string name="current_goal_value">Goal: %1$s lbs</string>
+    <string name="hint_goal_weight">Goal weight (lbs)</string>
+    <string name="action_save_goal">Save Goal</string>
+
+    <string name="toast_enter_goal">Enter a goal weight first.</string>
+    <string name="toast_goal_not_number">Goal weight must be a number.</string>
+    <string name="toast_goal_positive">Goal weight must be greater than zero.</string>
+    <string name="toast_goal_saved">Goal saved.</string>
+
+    <!-- Grid headers / row actions -->
+    <string name="col_date">Date</string>
+    <string name="col_weight">Weight (lbs)</string>
+    <string name="col_action">Action</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+
+    <!-- Generic actions -->
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_continue">Continue</string>
+    <string name="action_not_now">Not now</string>
+
+    <!-- Validation / feedback -->
+    <string name="toast_date_invalid">Enter a valid date (MM/DD/YYYY).</string>
+    <string name="toast_enter_weight">Enter a weight first.</string>
+    <string name="toast_weight_not_number">Weight must be a number.</string>
+    <string name="toast_weight_positive">Weight must be greater than zero.</string>
+    <string name="toast_entry_save_failed">Could not save entry.</string>
+
+    <string name="toast_entry_deleted">Entry deleted.</string>
+    <string name="toast_entry_delete_failed">Could not delete entry.</string>
+    <string name="toast_entry_updated">Entry updated.</string>
+    <string name="toast_entry_update_failed">Could not update entry.</string>
+    <string name="toast_date_weight_required">Date and weight are required.</string>
+
+    <string name="empty_entries_message">No entries yet. Add your first weight above.</string>
+
+    <!-- Dialog titles -->
+    <string name="dialog_edit_entry_title">Edit Entry</string>
+
+    <!-- SMS permission / explanation -->
+    <string name="sms_explanation_goal_weight">
+        Want a heads-up when you hit your goal? Turn on SMS alerts and we’ll text you.
+    </string>
+    <string name="sms_alerts_toggle_label">Allow SMS alerts</string>
+
+    <string name="sms_alerts_status_label">SMS alerts</string>
+    <string name="sms_alerts_status_off">Off</string>
+    <string name="sms_alerts_status_on">On</string>
+
+    <string name="sms_permission_status_label">System SMS permission</string>
+    <string name="sms_permission_status_not_granted">Not granted</string>
+    <string name="sms_permission_status_granted">Granted</string>
+
+    <string name="sms_phone_hint">Phone number for alerts</string>
+    <string name="action_save_phone">Save Phone Number</string>
+    <string name="sms_phone_saved_for_account">Phone number saved.</string>
+    <string name="sms_phone_missing">Add your phone number to enable texting.</string>
+    <string name="sms_phone_invalid">Enter a valid phone number (10-15 digits).</string>
+
+    <string name="sms_permission_required">SMS permission is required to enable SMS alerts.</string>
+    <string name="sms_permission_dialog_title">SMS Permission</string>
+    <string name="sms_permission_denied_toast">Permission denied. SMS alerts remain off.</string>
+
+    <string name="sms_if_granted_label">If you allow it</string>
+    <string name="sms_if_granted_body_goal_weight">
+        We’ll send a text when a new entry reaches your saved goal weight.
+    </string>
+
+    <string name="sms_if_denied_label">If you don’t allow it</string>
+    <string name="sms_if_denied_body">
+        You can still use the app normally, but you won’t receive text alerts.
+    </string>
+
+    <!-- SMS messages / toasts -->
+    <string name="sms_goal_reached_message">Weight Tracker: goal reached! Today: %1$s lbs.</string>
+    <string name="toast_sms_sent">Goal reached! SMS sent.</string>
+    <string name="toast_sms_not_sent">Goal reached! (SMS not sent)</string>
+    <string name="toast_sms_failed">Goal reached! (SMS failed)</string>
+</resources>

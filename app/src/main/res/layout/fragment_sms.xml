@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".SmsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Explains why SMS is requested -->
+        <TextView
+            android:id="@+id/text_sms_explanation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/sms_explanation_goal_weight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_max="360dp" />
+
+        <!-- User choice (default is off) -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_sms_alerts"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:minHeight="48dp"
+            android:text="@string/sms_alerts_toggle_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_sms_explanation"
+            app:layout_constraintWidth_max="360dp" />
+
+        <!-- Destination phone number for SMS alerts -->
+        <EditText
+            android:id="@+id/edit_sms_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:digits="+0123456789"
+            android:hint="@string/sms_phone_hint"
+            android:importantForAutofill="no"
+            android:imeOptions="actionDone"
+            android:inputType="phone"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switch_sms_alerts"
+            app:layout_constraintWidth_max="360dp" />
+
+        <Button
+            android:id="@+id/button_save_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:minHeight="48dp"
+            android:text="@string/action_save_phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_sms_phone"
+            app:layout_constraintWidth_max="360dp" />
+
+        <!-- Alerts status -->
+        <TextView
+            android:id="@+id/text_sms_alerts_status_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/sms_alerts_status_label"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/button_save_phone"
+            app:layout_constraintWidth_max="360dp" />
+
+        <TextView
+            android:id="@+id/text_sms_alerts_status_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/sms_alerts_status_off"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_sms_alerts_status_label"
+            app:layout_constraintWidth_max="360dp" />
+
+        <!-- System permission status -->
+        <TextView
+            android:id="@+id/text_sms_permission_status_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/sms_permission_status_label"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_sms_alerts_status_value"
+            app:layout_constraintWidth_max="360dp" />
+
+        <TextView
+            android:id="@+id/text_sms_permission_status_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/sms_permission_status_not_granted"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_sms_permission_status_label"
+            app:layout_constraintWidth_max="360dp" />
+
+        <!-- Behavior when permission is granted -->
+        <TextView
+            android:id="@+id/text_sms_granted_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/sms_if_granted_label"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_sms_permission_status_value"
+            app:layout_constraintWidth_max="360dp" />
+
+        <TextView
+            android:id="@+id/text_sms_granted_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/sms_if_granted_body_goal_weight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_sms_granted_label"
+            app:layout_constraintWidth_max="360dp" />
+
+        <!-- Behavior when permission is denied -->
+        <TextView
+            android:id="@+id/text_sms_denied_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/sms_if_denied_label"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_sms_granted_body"
+            app:layout_constraintWidth_max="360dp" />
+
+        <TextView
+            android:id="@+id/text_sms_denied_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/sms_if_denied_body"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_sms_denied_label"
+            app:layout_constraintWidth_max="360dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
